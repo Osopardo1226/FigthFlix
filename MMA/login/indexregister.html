@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="main/img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/stylelogin.css" />
+    <title>FightFlix</title>
+  </head>
+  <body>
+    <div id="background">
+      <img class="logo" src="../main/img/Logo2.png" />
+      <div class="align">
+        <div class="card">
+          <div class="head">
+            <div></div>
+            <a id="login" href="indexlogin.html">Login</a>
+            <a id="register" class="selected" href="#"
+              >Register</a
+            >
+            <div></div>
+          </div>
+          <div class="tabs">
+            <form action="insert.php" method="post">
+              <div class="inputs">
+                <div class="input">
+                  <input
+                    placeholder="Email"
+                    type="text"
+                    name="email"
+                  />
+                  <img src="img/arroba.png" />
+                </div>
+                <div class="input">
+                  <input
+                    placeholder="Username"
+                    type="text"
+                    name="username"
+                  />
+                  <img src="img/usario.png" />
+                </div>
+                <div class="input">
+                  <input
+                    placeholder="password"
+                    type="password"
+                    name="password"
+                  />
+                  <img src="img/contraseña.png" />
+                </div>
+              </div>
+              <button type="submit">Register</button>
+              <br />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var images = [
+        "../img/fondo/Imagen1.jpg",
+        "../img/fondo/Imagen2.jpg",
+        "../img/fondo/Imagen8.jpg",
+        "../img/fondo/Imagen7.jpg",
+        "../img/fondo/Imagen5.jpg",
+      ];
+      var currentIndex = 0;
+      var background = document.getElementById("background");
+
+      function changeBackground() {
+        currentIndex = (currentIndex + 1) % images.length;
+        background.style.backgroundImage = "url(" + images[currentIndex] + ")";
+      }
+
+      setInterval(changeBackground, 3000);
+    </script>
+  </body>
+</html>
